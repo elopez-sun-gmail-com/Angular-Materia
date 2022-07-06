@@ -1,0 +1,43 @@
+[
+    {
+        "clave_ent": 1,
+        "nom_ent": "AGUASCALIENTES"
+    },
+    {
+        "clave_ent": 2,
+        "nom_ent": "BAJA CALIFORNIA"
+    },
+    {
+        "clave_ent": 3,
+        "nom_ent": "BAJA CALIFORNIA SUR"
+    },
+    {
+        "clave_ent": 4,
+        "nom_ent": "CAMPECHE"
+    },
+    {
+        "clave_ent": 5,
+        "nom_ent": "COAHUILA DE ZARAGOZA"
+    },
+    {
+        "clave_ent": 6,
+        "nom_ent": "COLIMA"
+    },
+    {
+        "clave_ent": 7,
+        "nom_ent": "CHIAPAS"
+    },
+    {
+        "clave_ent": 8,
+        "nom_ent": "CHIHUAHUA"
+    },
+    {
+        "clave_ent": 9,
+        "nom_ent": "CIUDAD DE MÉXICO"
+    },
+    {
+        "clave_ent": 10,
+        "nom_ent": "DURANGO"
+    }
+  
+  ]

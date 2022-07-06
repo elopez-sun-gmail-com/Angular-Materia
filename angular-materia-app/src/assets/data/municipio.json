@@ -1,0 +1,47 @@
+[
+    {
+        "clave_ent": 1,
+        "clave-clave_mun": 1,
+        "nom_mun": "AGUASCALIENTES"
+    },
+    {
+        "clave_ent": 1,
+        "clave-clave_mun": 2,
+        "nom_mun": "ASIENTOS"
+    },
+    {
+        "clave_ent": 1,
+        "clave-clave_mun": 3,
+        "nom_mun": "CALVILLO"
+    },
+    {
+        "clave_ent": 2,
+        "clave-clave_mun": 1,
+        "nom_mun": "ENSENADA"
+    },
+    {
+        "clave_ent": 2,
+        "clave-clave_mun": 2,
+        "nom_mun": "MEXICALI"
+    },
+    {
+        "clave_ent": 2,
+        "clave-clave_mun": 3,
+        "nom_mun": "TECATE"
+    },
+    {
+        "clave_ent": 3,
+        "clave-clave_mun": 1,
+        "nom_mun": "COMONDÚ"
+    },
+    {
+        "clave_ent": 3,
+        "clave-clave_mun": 2,
+        "nom_mun": "MULEGÉ"
+    },
+    {
+        "clave_ent": 3,
+        "clave-clave_mun": 3,
+        "nom_mun": "LA PAZ"
+    }
+  ]

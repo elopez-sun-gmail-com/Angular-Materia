@@ -1,0 +1,147 @@
+<form class="example-form">
+
+
+
+  <ngx-loading
+  [show]="loading"
+  [config]="{
+    animationType: ngxLoadingAnimationTypes.cubeGrid,
+    primaryColour: primaryColour,
+    backdropBorderRadius: '3px'
+  }"
+  [template]="loadingTemplate"
+></ngx-loading>
+ 
+
+    <table class="example-full-width" cellspacing="0"><tr>
+        <td>
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input matInput placeholder="First Name"  [(ngModel)]="service.usuarioService.nombre" id="nombre"  name="nombre"   >
+              
+              </mat-form-field>
+
+        </td>
+        <td>
+            <mat-form-field appearance="outline">
+                <mat-label>Apellido</mat-label>
+                <input matInput placeholder="Last Name" [(ngModel)]="service.usuarioService.apellido" id="apellido"  name="apellido">
+              </mat-form-field>
+
+        </td>
+      </tr></table>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Usuario</mat-label>
+          <input matInput placeholder="User" [(ngModel)]="service.usuarioService.usuario" id="usuario"  name="usuario"  >
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Cumpleaños</mat-label>
+            <input matInput [matDatepicker]="picker1"  [(ngModel)]="service.usuarioService.cumpleanos" id="cumpleanos"  name="cumpleanos" >
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Correo</mat-label>
+            <input type="email" matInput  placeholder="Ex. pat@example.com"  [(ngModel)]="service.usuarioService.email" id="email"  name="email">
+           <!--  <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error> -->
+          </mat-form-field>
+
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Telefono</mat-label>
+            <input matInput placeholder="0000-0000" [(ngModel)]="service.usuarioService.telefono" id="telefono"  name="telefono">
+          </mat-form-field>
+      </p>
+          
+      <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Direccion</mat-label>
+            <textarea matInput [(ngModel)]="service.usuarioService.direccion" id="direccion"  name="direccion"></textarea>
+            <!-- <textarea matInput placeholder="Adress"  [(ngModel)]="service.usuarioService.direccion" id="direccion"  name="direccion"> -->
+          </mat-form-field>
+
+      </p>
+
+    <table class="example-full-width" cellspacing="0">
+        <tr>
+            <td>
+                <mat-form-field appearance="outline">
+                <mat-label>Ciudad</mat-label>
+                <input matInput placeholder="Ex. San Francisco"   [(ngModel)]="service.usuarioService.ciudad" id="ciudad"  name="ciudad">
+                </mat-form-field>
+            </td>
+           
+            <td>
+                <mat-form-field appearance="outline">
+                <mat-label>CP</mat-label>
+                <input matInput placeholder="Ex. San Francisco"  [(ngModel)]="service.usuarioService.cp" id="cp"  name="cp">
+                </mat-form-field>
+            </td>
+      </tr>
+    </table>
+<p>
+    
+     
+</p>
+
+<p>
+  <mat-radio-group aria-label="Select an option">
+    <mat-radio-button value="M">Masculino</mat-radio-button>
+    <mat-radio-button value="F">Femenino</mat-radio-button>
+  </mat-radio-group>
+  
+</p>
+
+<br>
+
+<table class="example-full-width" cellspacing="0">
+  <tr>
+      <td>
+        <mat-form-field appearance="outline">
+          <mat-label>Estado</mat-label>
+          <mat-select [(ngModel)]="service.usuarioService.estado" id="estado"  name="estado"  (ngModelChange)="onchangeEstado($event)">
+            <mat-option [value]="l.clave_ent" *ngFor="let l of listaEstado">{{l.nom_ent}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field appearance="outline">
+          <mat-label>Municipio</mat-label>
+          <mat-select [(ngModel)]="service.usuarioService.municipio" id="municipio"  name="municipio">
+            <mat-option [value]="l.clave_mun" *ngFor="let l of listaMunicipio">{{l.nom_mun}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </td>
+      <td>
+         
+      </td>
+</tr>
+</table>
+
+<br />
+
+
+<section>
+      <table>
+          <tr>
+              <td>  
+                    <button mat-button color="primary" (click)="guardar()" >Save</button>
+                </td>
+              <td> <button mat-button (click)="cancelar()">Cancel</button></td>
+          </tr>
+      </table>
+    </section>
+</form>
